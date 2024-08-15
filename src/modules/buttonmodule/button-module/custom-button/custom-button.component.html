@@ -1,0 +1,14 @@
+<div class="center">
+  <div class="wrap">
+    <a
+      class="btn"
+      href="#"
+      [class.disabled]="disabled"
+      [attr.aria-disabled]="disabled ? true : null"
+      (click)="disabled ? $event.preventDefault() : null"
+      >{{ buttonName }}
+      <section *ngIf="iconClass" [class]="iconClass"></section>
+      <span></span
+    ></a>
+  </div>
+</div>

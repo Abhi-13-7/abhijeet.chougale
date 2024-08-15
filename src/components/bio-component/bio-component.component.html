@@ -1,0 +1,44 @@
+<div class="main-content">
+  <!-- <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+  <div class="shape shape4"></div> -->
+  <!-- <app-header-component></app-header-component> -->
+  <div class="intro">
+    <div class="profile-text">
+      <div class="headline">
+        Hey there!
+        <p>
+          <span>I'm </span>
+          <strong class="name" *ngIf="!isMobileView">Abhijeet Chougale</strong>
+          <strong class="name" *ngIf="isMobileView">Abhijeet </strong>
+        </p>
+      </div>
+      <div class="tagLine">
+        <div>I Design and Develop</div>
+        <div class="devComponents">
+          <div>Web APP</div>
+          <div>API's</div>
+          <div *ngIf="!isMobileView">Database entities</div>
+          <div *ngIf="isMobileView">Database</div>
+          <div>Services</div>
+        </div>
+      </div>
+      <app-custom-button
+        [buttonName]="'Resume'"
+        [iconClass]="'fa-solid fa-file-arrow-down'"
+        (click)="downloadResume()"
+      ></app-custom-button>
+      <app-social-media-icons></app-social-media-icons>
+    </div>
+    <lottie-player
+      class="lottie-animation"
+      *ngIf="!isMobileView"
+      src="../../assets/devanimation.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay
+    ></lottie-player>
+  </div>
+</div>

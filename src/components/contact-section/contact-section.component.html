@@ -1,0 +1,79 @@
+<div class="mainContainer">
+  <div class="contact-section">
+    <h1 class="heading">Leave Your Blessings Here! 💌</h1>
+    <div class="contact-section-items">
+      <form  #contactForm="ngForm">
+        <div class="field">
+          <label for="message">Message* </label>
+          <textarea
+            name="message"
+            id="message"
+            [placeholder]="'Type your message here... or tell us a joke! 😄'"
+            ngModel
+            required
+          ></textarea>
+        </div>
+        <div class="field">
+          <label for="from_name">Your Name*</label>
+          <input
+            type="text"
+            name="from_name"
+            id="from_name"
+            [placeholder]="'What should we call you?'"
+            ngModel
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="reply_to">Your Email*</label>
+          <input
+            type="email"
+            name="reply_to"
+            id="reply_to"
+            [placeholder]="'Your email, pretty please!'"
+            ngModel
+            required
+          />
+        </div>
+        <app-custom-button
+          type="submit"
+          id="button"
+          [disabled]="contactForm.invalid !== false"
+          [ngClass]="{
+            'app-custom-button-disabled': contactForm.invalid,
+            'app-custom-button-enabled': !contactForm.invalid
+          }"
+          [buttonName]="'Send Note'"
+          [iconClass]="'fa-solid fa-envelope-circle-check'"
+          (click)="sendEmail(contactForm)"
+        ></app-custom-button>
+      </form>
+      <div class="contact-section-right">
+        <div class="note">
+          <h2>
+            <em>
+              Whether you have a question, feedback, or just want to say hello,
+              feel free to drop us a note. Your thoughts are important to us!!!
+            </em>
+          </h2>
+        </div>
+        <div class="contact-Social-icons">
+          <app-social-media-icons></app-social-media-icons>
+        </div>
+        <h2 class="end-line">Awaiting your touch in our conversation ✨💬</h2>
+      </div>
+    </div>
+    <hr />
+    <br />
+    <br />
+    <div class="tradeMark">
+      <div>
+        Crafted with care by
+        <span *ngIf="!isMobileView">@Abhijeet_Chougale</span>
+      </div>
+      <div *ngIf="isMobileView">@Abhijeet_Chougale</div>
+      <div></div>
+      <div>©{{ year | date : "y" }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+.mainContainer{
+    Padding:2rem ;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 3rem 0rem 6rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .heading{
+    margin: 1rem  2rem ;
+  }
+  
+  .Tech-list {
+    flex: 1 0 18%; 
+  }
+  
+  .cards {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1rem solid white;
+    background-color: rgba(249,250,251,255);
+
+  }
+  
+  .tech-item {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+  }
+  
+  .tech-logo {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px; 
+  }
+  
+  .tech-name {
+    font-size: 1.2em; 
+  }
+
+
+  @media (max-width:600px){
+   .mainContainer{
+      padding: 0.5rem;
+    }
+    .container{
+      margin: 0.5rem;
+    }
+
+    .cards{
+      padding: 0.5rem;
+      border: 0.5rem solid white;
+    }
+
+    .tech-item{
+      padding: 0;
+    }
+
+    .tech-logo{
+      width: 36px;
+      height: 30px;
+    }
+
+  }  

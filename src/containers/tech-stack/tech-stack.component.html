@@ -1,0 +1,20 @@
+<div class="mainContainer">
+  <div class="container">
+    <div class="heading">
+      <h1>Technologies and Tools</h1>
+      <div>
+        Using a combination of cutting-edge technologies and reliable
+        open-source software I build user-focused, performant apps and websites
+        for smartphones, tablets, and desktops.
+      </div>
+    </div>
+    <div class="Tech-list" *ngFor="let technology of techStack">
+      <mat-card appearance="outlined" class="cards">
+        <div class="tech-item">
+          <img mat-card-image src="{{ technology.logo }}" class="tech-logo" />
+          <section class="tech-name">{{ technology.name }}</section>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

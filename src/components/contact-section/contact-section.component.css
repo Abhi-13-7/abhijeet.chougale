@@ -1,0 +1,165 @@
+.mainContainer{
+  Padding:2rem ;
+}
+
+.contact-section {
+    border-radius: 8px;
+    margin:3rem 3rem 0rem 6rem;
+    padding: 3rem 3rem 0.5rem 3rem;
+    background-color: rgb(136, 189, 188);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .end-line,
+  .heading{
+    display: flex;
+    justify-content: center;
+    color:rgb(23, 37, 42);
+    margin: 0.2rem 0 0.5rem 0;
+    text-shadow:  2px 2px 4px #f7f7f7;
+    ;
+  }
+  
+  .contact-section-items{
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .contact-section-items form {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 3rem;
+    width: 70%;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+    color:rgb(23, 37, 42);
+  }
+  
+  .field label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .field input,
+  .field textarea {
+    padding: 10px;
+    border: 1px solid rgb(237, 232, 245);
+    border-radius: 4px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: bisque;
+    transition: background-color 0.3s ease;
+  }
+
+  textarea{
+    height: 5rem;
+    background-color: bisque;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+  background-color: #d4f0f4; 
+  border-color: #88c0d0; 
+  }
+  
+  .note{
+    margin-top: -0.5rem;
+    color:rgb(16, 54, 18);
+    font-family: 'Palatino', serif;
+    font-weight: bold;
+  }
+
+  .contact-section-right{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    gap: 1.3rem;
+  }
+
+  .contact-Social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  app-social-media-icons{
+    margin: 1rem;
+    --social-icon-color :rgb(152, 48, 11);
+    --icons-shadow-color:rgba(212, 228, 173, 0.731);
+  }
+
+  app-custom-button{
+    --btn-font-size: x-large;
+    --btn-padding: 0.1rem;
+    --btn-border-radius: 5rem;
+    align-self: center;
+    --btn-border-color:rgb(16, 54, 18);
+  }
+
+  .app-custom-button-enabled{
+    --btn-color: white;
+    --btn--hover-bg-color : green;
+    --btn-border-color: rgb(224, 112, 37);
+    --btn-bg-color: rgba(218, 218, 15, 0.669);
+  }
+
+  .tradeMark{
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tradeMark div{
+    align-self: center;
+  }
+
+  @media (max-width:880px){
+    .contact-section-items{
+      flex-direction: column;
+      gap:0.5rem;
+    }
+
+    .contact-section-right{
+      margin-right: 0rem;
+    }
+  }
+
+  @media (max-width:615px){
+    .mainContainer{
+      padding: 0.5rem;
+    }
+    .contact-section{
+      padding: 0.5rem;
+      margin: 0.5rem;
+    }
+    .contact-section-items{
+      margin: 0.5rem ;
+    }
+
+    .contact-section-items form{
+      margin: 0.5rem;
+      width: 100%;
+    }
+
+    .end-line{
+      font-size: 1.5em;
+    }
+    .heading{
+      font-size: 2em;
+      width: 90%;
+    }
+     
+   .field input,
+   .field textarea {
+    width: 90%;
+   }
+
+  }
+  

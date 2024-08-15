@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body{width: 100%; padding:0;
+margin: 0;}
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+
+:root {
+    --btn-color: rgb(0, 0, 0);
+    --btn-border-color:#124e66;
+    --btn-bg-color: transparent;
+    --btn-hover-color: aliceblue;
+    --btn-font-family: Cambria;
+    --btn-font-size:medium;
+    --btn--hover-bg-color :#124e66;
+    --btn-disabled-bg-color: #CCC;
+    --btn-padding: 0.1rem;
+    --btn-border-radius: 0.5rem;
+    --btn-hover-bg-size: 400%;
+    --btn-hover-bg-height: 10rem;
+    --social-icon-color: #ffffff; 
+    --icons-shadow-color:rgba(173, 173, 173, 0.79)
+  }
+  

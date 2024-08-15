@@ -1,0 +1,26 @@
+.container{
+    background: linear-gradient(300deg,rgb(77, 88, 79),rgb(149, 100, 179),rgb(18, 78, 102),rgb(46, 57, 68),rgba(32, 92, 53, 0.785));
+    animation: gradient-animation 18s ease infinite;
+    background-size: 200% 180%;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    30% {
+      background-position: 90% 50%;
+    }
+    60%{
+      background-position: 20% 70%;
+    }
+    80% {
+      background-position: 0% 90%;
+    }
+    100%{
+      background-position:0% 0% ;
+    }
+  }
+
+
+ 

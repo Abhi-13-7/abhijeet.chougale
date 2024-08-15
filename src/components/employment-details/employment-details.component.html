@@ -1,0 +1,78 @@
+<h2 class="Heading">Work Experience</h2>
+<div class="container">
+  <div class="job-card" *ngFor="let company of companies">
+    <div class="job-info" (click)="toggleExpand(company.name)">
+      <div class="header">
+        <div class="company-name">
+          <img [src]="company.icon" class="company-icon" />
+          {{ company.name }}
+        </div>
+        <div class="about-company">
+          <app-custom-button
+            *ngIf="isCompanyExpanded(company.name)"
+            (click)="openURLInNewWindow(company.AboutCompany)"
+            [buttonName]="'About Company'"
+          ></app-custom-button>
+          <button class="expand-button">
+            {{ isCompanyExpanded(company.name) ? "Hide" : "Show" }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-details" *ngIf="isCompanyExpanded(company.name)">
+      <div class="job-description">
+        <div>
+          <app-tooltip [tooltipText]="'Designation'" [position]="'bottom'"
+            ><i class="fa-solid fa-building-user"></i>
+            {{ company.designations[0].name }}</app-tooltip
+          >
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i> {{ company.location }}
+        </div>
+      </div>
+
+      <div class="job-summary">
+        <div class="job-title">
+          <app-tooltip [tooltipText]="'role'" [position]="'bottom'"
+            ><i class="fa-solid fa-user"></i> {{ company.role }}</app-tooltip
+          >
+        </div>
+        <div class="job-duration">
+          {{ company.joiningDate | DisplayDate }} -
+          {{ company.leavingDate | DisplayDate }}
+        </div>
+      </div>
+
+      <div class="responsive-grid">
+        <div class="project-card" *ngFor="let project of company.projects">
+          <div class="project-header">
+            <div class="project-title">
+              <i class="fa-solid fa-globe"></i> {{ project.title }}
+            </div>
+            <div class="project-duration">
+              {{ project.startDate | DisplayDate }} -
+              {{ project.endDate | DisplayDate }}
+            </div>
+          </div>
+          <div class="project-description">
+            <p [class.collapsed]="!isDescriptionExpanded(project.title)">
+              {{ project.description }}
+            </p>
+            <a
+              (click)="toggleDescription(project.title)"
+              class="read-more-text"
+            >
+              {{
+                isDescriptionExpanded(project.title)
+                  ? " Read Less"
+                  : "... Read More"
+              }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+<h2 class="Heading">Certification's</h2>
+<div class="container responsive-grid">
+  <mat-card class="card" *ngFor="let card of cards">
+    <img mat-card-image class="images" [src]="path + card.image" />
+    <mat-card-header>
+      <mat-card-title>
+        <span class="material-icons">card_membership</span>
+        {{ card.certificateName }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div style="font-size: small; font-weight: normal">Provided by</div>
+      <div>{{ card.provider }}</div>
+      <div>{{ card.date | date }}</div>
+    </mat-card-content>
+    <mat-card-actions>
+      <app-custom-button
+        mat-button
+        (click)="openURLInNewWindow(card.link)"
+        [buttonName]="'Show Certificate'"
+      ></app-custom-button>
+    </mat-card-actions>
+  </mat-card>
+</div>

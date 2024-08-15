@@ -1,0 +1,321 @@
+.main-content {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    line-height: 2.5rem; 
+  }
+  
+  .intro {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+  }
+
+  .profile-text{
+    width: 100%;
+    margin-top: 2rem ;
+    margin-left:8rem;
+    font-size: 1.5rem;
+    font-family: cursive;
+    color: #88bdbc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 1;
+
+  }
+
+  .headline{
+    font-size: 3rem;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+  .profile-text > app-custom-button{
+    --btn-border-color: rgb(224, 112, 37);
+    --btn-color: rgb(242, 242, 242);
+    --btn-bg-color: rgb(0, 49, 53);
+    --btn-font-size: x-large;
+    --btn-padding: 0.5rem;
+    --btn-border-radius: 9rem;
+    z-index: 1;
+  }
+
+  .name{
+    color: rgba(247, 224, 97, 255);
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .company-icon{
+    height: 40px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:normal;
+  }
+
+ .tagLine{
+    font-family: monospace;
+    color: darkgrey;
+    align-content: center;
+    display: inline-flex;
+    margin-bottom: 2rem;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .devComponents {
+    height :2rem;
+    overflow:hidden;
+    margin-left: 0.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .devComponents > div  {
+    padding: 0rem 0rem;
+    height: 2rem;
+    color :rgba(97,196,247,255) ;
+  }
+
+
+  .devComponents div:first-child {
+    animation: text-animation 8s infinite;
+  }
+
+  .devComponents > div:nth-child(3) {
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  app-custom-button{
+    margin: 0 auto  2rem 6rem ;
+    --btn-hover-color: rgba(0,0,0)    ;
+    --btn--hover-bg-color : rgb(255,245,255);
+
+
+  }
+
+  app-social-media-icons{
+    --social-icon-color: rgb(255,235,215);
+    margin: 0 auto  2rem 2.5rem ;
+  }
+
+  .lottie-animation{
+    width: 100%;
+    height: 70%;
+    margin: 0 6rem 0 2rem;
+    padding: auto; 
+  }
+
+
+  @media (max-width: 1029.34px) {
+    .lottie-animation {
+      width: 100%;
+      height: 100vh; 
+      margin: 0;
+      padding: 0;
+      background: url('../../assets/devanimation.json') no-repeat center center;
+      background-size: cover; 
+      position: absolute; 
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+    }
+    .profile-text {
+      z-index: 1;
+    }
+  }
+
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -2.10rem;}
+    30% {margin-top: -2.10rem;}
+    40% {margin-top: -4.08rem;}
+    60% {margin-top: -4.08rem;}
+    70% {margin-top: -6.07rem;}
+    80% {margin-top: -6.07rem;}
+    90% {margin-top: 0; }
+    100% {margin-top: 0;}
+  }
+
+  @media (max-width:600px){
+    .profile-text{
+      margin-left: 0rem;
+      margin-bottom: 4rem;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .headline{
+      font-size: 2rem;
+    }
+
+    .profile-text > app-custom-button{
+      margin: 0;
+    }
+
+    app-social-media-icons{
+      margin: 0;
+    }
+
+    .tagLine{
+      display: flex;
+      flex-direction:column;
+      margin-bottom: 0;
+      align-items: center;
+    }
+
+    .devComponents{
+      margin-left: 0rem;
+    }
+
+  app-custom-button{
+    --btn-font-size: x-large;
+    --btn-padding: 0.1rem;
+    --btn-border-radius: 5rem;
+    margin: 0 auto  2rem 5rem ;
+
+  }
+
+ }
+  
+  .shape {
+    width: 5%;
+    height: 7%;
+    position: absolute;
+    opacity: 0.6;
+    filter: blur(10px);
+  }
+  
+  .shape.shape1 {
+
+    background-color: rgba(12, 0, 150, 0.7);
+    border-radius: 50%;
+    top: 20%;
+    left: 60%;
+    animation: move1 40s infinite;
+  }
+  
+  .shape.shape2 {
+
+    background-color: rgba(243, 152, 55, 0.772);
+    border-radius: 50%;
+    top: 75%;
+    left: 20%;
+    animation: move2 45s infinite;
+  }
+  
+  .shape.shape3 {
+
+    background-color: rgba(226, 226, 226, 0.7);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    animation: move3 35s infinite;
+  }
+  
+  .shape.shape4 {
+
+    background-color: rgba(215, 236, 112, 0.7);
+    border-radius: 50%;
+    top: 75%;
+    left: 80%;
+    animation: move4 50s infinite;
+  }
+  
+  @keyframes move1 {
+    0% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-60vh, 67vh);
+      background-color: rgba(168, 92, 4, 0.774);
+    }
+    40% {
+      transform: translate(-105vh, 20vh);
+      background-color: rgb(0, 100, 83);
+    }
+    60% {
+      transform: translate(-70vh, -20vh);
+      background-color: rgb(184, 192, 68);
+    }
+    80% {
+      transform: translate(0, 0);
+      background-color: rgba(128, 255, 0, 0.664);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+      transform: translate(-30vw, 0);
+      background-color: rgba(255, 228, 77, 0.774);
+    }
+    20% {
+      transform: translate(50vw, -75vh);
+    }
+    40% {
+      transform: translate(75vw, -30vh);
+    }
+    60% {
+      transform: translate(20vw, 15vh);
+      background-color: rgb(117, 17, 37);
+    }
+    80% {
+      transform: translate(-20vw, -40vh);
+    }
+    100% {
+      transform: translate(-30vw, 0);
+      background-color: rgba(240, 248, 255, 0.678);
+    }
+  }
+  
+  @keyframes move3 {
+    0% {
+      transform: translate(30vw, 30vw);
+    }
+    20% {
+      transform: translate(45vw, -30vh);
+    }
+    40% {
+      transform: translate(70vw, 55vh);
+    }
+    60% {
+      transform: translate(-15vw, 30vh);
+    }
+    80% {
+      transform: translate(15vw, -30vh);
+      background-color: rgb(110, 28, 90);
+    }
+    100% {
+      transform: translate(30vw, 30vw);
+    }
+  }
+  
+  @keyframes move4 {
+    0% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-70vw, -60vh);
+      background-color: rgb(5, 82, 82);
+    }
+    40% {
+      transform: translate(10vw, 20vh);
+    }
+    60% {
+      transform: translate(20vw, -20vh);
+    }
+    80% {
+      transform: translate(-10vw, 10vh);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }

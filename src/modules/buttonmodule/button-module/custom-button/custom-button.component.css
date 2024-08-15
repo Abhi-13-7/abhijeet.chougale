@@ -1,0 +1,83 @@
+a {
+  text-decoration: none;
+  line-height: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.center {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wrap{
+  width: 50%;
+  float: left;
+}
+
+[class^="btn"] {
+  position: relative;
+  display: inline-flex;
+  width: max-content;
+  overflow: hidden; 
+  height: fit-content;
+  max-width: 30rem;
+  margin: 0.5rem auto;
+  background-color: var(--btn-bg-color);
+  border: 0.2rem solid var(--btn-border-color);
+}
+
+.btn.disabled {
+  background-color: var(--btn-disabled-bg-color);
+  cursor: not-allowed;
+}
+
+.btn{
+  color: var(--btn-color);
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  z-index: 0;
+  border-radius: var(--btn-border-radius);
+  border-color: var(--btn-border-color);
+  padding: var(--btn-padding);
+  align-items: center;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--btn--hover-bg-color);
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn:hover span {
+  width: var(--btn-hover-bg-size);
+  height: var(--btn-hover-bg-height);
+}
+
+.btn section{
+  padding: 0.2rem 0.5rem;
+}
+
+.btn:hover {
+  color: var(--btn-hover-color);
+}
+
+
+
+@media(max-width: 600px) {
+  .btn {
+    font-size:var (--btn-font-size);
+    line-height: 1rem;
+  } 
+  
+  .center {
+    padding: 0rem;
+  }
+}

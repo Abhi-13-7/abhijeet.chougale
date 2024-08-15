@@ -1,0 +1,220 @@
+.Heading{
+  display: flex;
+  justify-content: center;
+  color: azure;
+  font-size: 2.5rem;
+}
+   
+   .container {
+    margin: 0.5rem 3rem;
+    color: rgb(0, 0, 0);
+    padding: 0 2rem  6rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .job-card {
+    border: 0.2rem solid #f8f7f7;
+    background-color: rgb(235, 233, 225);
+    border-radius: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding: 1rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .job-description{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Lucida', monospace;
+    padding:  0.3rem 2rem 0.3rem 3rem;
+
+
+  }
+  .job-info {
+    position: relative;
+    padding:  0.3rem 0 0 3rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .company-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    color: rgb(37, 39, 77);
+    font-size: 1.5rem;
+  }
+
+  .company-icon{
+    height: 3rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:normal;
+  }
+
+  .about-company{
+    display: inline-flex;
+  }
+  
+  .expand-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer; 
+    padding: 0rem 0.5rem ;
+    margin:  0rem 0.5rem;
+  }
+  
+  .job-summary {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Lucida', monospace;
+    padding:  0.3rem 0 0 3rem;
+
+  }
+  
+  .job-duration {
+    padding-right: 2rem;
+    color: rgba(42, 44, 44, 0.651);
+  }
+  
+  .job-description {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .job-title {
+    display: flex;
+  }
+  
+  .responsive-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    padding:  1rem 2rem;
+  }
+  
+  .project-card {
+    border: 0.1rem solid #000000;
+    border-radius: 0.2rem;
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0.4rem;
+  }
+
+  .project-title{
+    color: rgb(37, 39, 77);
+  }
+  
+  .project-duration {
+    float: right;
+    color: rgba(42, 44, 44, 0.651);
+  }
+  
+  .project-description {
+    text-indent:1em;
+    font-family: bradley hand , cursive;    
+    margin-top: 5px;
+    padding: 0 0.6rem ;
+  }
+  .project-description {
+    position: relative;
+    line-height: 1.5;
+    max-width: 500px; 
+  }
+  
+  .project-description p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .project-description p.collapsed {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  
+  .project-description p:not(.collapsed) {
+    display: block;
+    -webkit-line-clamp: none;
+  }
+  
+  .read-more-text {
+    float:right;  
+    margin-top: -0.2rem;
+    font-size: 0.8rem;
+    color:rgb(55, 71, 133);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  i {
+    padding-right: 0.5rem;
+  }
+  
+
+
+  @media screen and (max-width: 600px) {
+    .responsive-grid {
+      grid-template-columns: 1fr; 
+      padding: 0rem 0.2rem;
+    }
+
+    .container {
+      padding:0.5rem;
+      margin:0.5rem;
+    }
+
+    .job-info{
+      padding: 0.5rem;
+    }
+
+    .job-description{
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+    .job-duration{
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .job-summary{
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    .job-title{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .company-icon{
+      height: 2rem;
+      aspect-ratio: 3/2;
+      object-fit: contain;
+      mix-blend-mode:normal;
+    }
+
+    app-custom-button{
+      --btn-font-size:0.6em;
+    }
+  }

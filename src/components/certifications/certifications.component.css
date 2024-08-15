@@ -1,0 +1,119 @@
+.container {
+    padding-bottom: 10rem;
+    }
+  
+    .Heading{
+      display: flex;
+      justify-content: center;
+      color: azure;
+      font-size: 2.5rem;
+    }
+  
+    .responsive-grid {
+      display: grid;
+      padding: 1rem 2em;
+      grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+      gap: 1em;
+    }
+  
+    .images {
+      width: 100%;
+      height: 12rem;
+      object-fit:cover;
+      border: 0.3rem solid rgb(255, 255, 255);
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+  
+    .card{
+      margin: 3vh 4vh 6vh 8vh;
+      background-color: rgb(237, 232, 245);
+      border-style: solid;
+      border-color: rgb(237, 232, 245);
+      border-width: 0.1rem;
+      border-radius: 0.7rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    
+    mat-card-header{ 
+      display: flex;
+      justify-content: center;
+      align-items:center; 
+      background: linear-gradient(to right, rgba(250, 250, 250, 0) 0%, rgb(232, 235, 231) 100%);  
+    }
+  
+    mat-card-title{
+     width: 100%;
+     text-align: start;
+     font-size: large;
+     font-family: "Times New Roman";
+     font-weight: bolder;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap:0.1rem;
+    }
+
+    mat-card-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:0.3rem;
+      font-size: medium;
+      font-family: "Times New Roman";
+      font-weight: bold;
+    }
+  
+    mat-card-actions{
+      display: flex;
+      justify-content: center;
+      align-items:center; 
+      padding: 0;
+    }
+  
+    .company-icon{
+      height: 3rem;
+      aspect-ratio: 3/2;
+      object-fit: contain;
+      mix-blend-mode:normal;
+    }
+  
+    .material-icons{
+      color: deeppink;
+      font-size: xx-large;
+    }
+  
+
+  
+  @media (max-width:600px) {
+  
+  .designations{  
+      font-size: small;
+    }
+  
+    .responsive-grid{
+      padding: 1rem;
+    }
+    
+    app-custom-button{
+      padding: 0;
+      --btn-font-size: 0.6em;
+  
+    }
+
+    .card{
+      margin: 0.2vh;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
