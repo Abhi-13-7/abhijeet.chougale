@@ -28,7 +28,7 @@ export class BioComponentComponent implements OnInit {
   downloadResume() {
     //hardcoded resume download link from drive
     window.open(
-      'https://drive.google.com/uc?export=download&id=1MNmtfXP40OEl-jBNin9aTneCoQVjtBI0'
+      'https://drive.google.com/uc?export=download&id=1Vh1lhpU9Q7GGo0e3CJYlIYLDR5xfI4YX'
     );
     return false;
   }
